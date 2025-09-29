@@ -1,0 +1,278 @@
+/* --- Global Styles & Variables --- */
+:root {
+    --primary-color: #3a3a3a;
+    --secondary-color: #f4f4f4;
+    --accent-color: #8b4513; /* A warm, wood-like color */
+    --text-color: #333;
+    --light-text-color: #fff;
+    --border-radius: 8px;
+    --font-family: 'Poppins', sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: #fff;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* --- Header & Navigation --- */
+.site-header {
+    background: #fff;
+    padding: 1rem 0;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-nav .logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav ul li {
+    margin-left: 25px;
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.main-nav ul li a:hover,
+.main-nav ul li a.active {
+    background-color: var(--accent-color);
+    color: var(--light-text-color);
+}
+
+
+/* --- Hero Section --- */
+.hero {
+    background-image: linear-gradient(rgba(0,0,0,0.0), rgba(0,0,0,0.0)), url('https://png.pngtree.com/thumb_back/fh260/background/20230617/pngtree-interior-design-with-vintage-wooden-furniture-3d-rendered-image_3642663.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--light-text-color);
+    text-align: center;
+    padding: 120px 0;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    color: var(--light-text-color);
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+}
+
+.btn {
+    background-color: var(--accent-color);
+    color: var(--light-text-color);
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    font-weight: 500;
+    display: inline-block;
+    transition: background-color 0.3s, transform 0.2s;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.btn:hover {
+    background-color: #6a350f;
+    transform: translateY(-2px);
+}
+
+/* --- Featured Products & Product Grid --- */
+.featured-products, .main-content {
+    padding: 60px 0;
+}
+
+.featured-products h2, .main-content h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.main-content h1 {
+    margin-bottom: 10px;
+}
+
+.page-intro {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 40px;
+    font-size: 1.1rem;
+    color: #666;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+.product-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.product-card h3 {
+    font-size: 1.3rem;
+    margin: 15px 0 5px;
+}
+
+.product-card .price {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+}
+
+/* --- About Page --- */
+.text-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.text-content p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.content-image {
+    width: 100%;
+    border-radius: var(--border-radius);
+    margin-bottom: 2rem;
+}
+
+/* --- Contact Page --- */
+.contact-container {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.contact-form {
+    flex: 2;
+    min-width: 300px;
+}
+
+.contact-info {
+    flex: 1;
+    background: var(--secondary-color);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    min-width: 300px;
+}
+
+.contact-info h3 {
+    margin-top: 0;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    margin: 0 0 15px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    font-family: var(--font-family);
+    font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+/* --- Footer --- */
+.site-footer {
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+/* --- Responsive Styles --- */
+@media (max-width: 768px) {
+    .main-nav ul {
+        display: none; /* Simple hiding for mobile, could be replaced with a hamburger menu */
+    }
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    .contact-container {
+        flex-direction: column;
+    }
+}
